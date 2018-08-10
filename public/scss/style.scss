@@ -1,0 +1,30 @@
+.sequencing-content-container{
+    height:360px;
+    width:640px;
+    background:blue;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+
+    .question-container{
+        padding:1.875% 14.06%;
+        height: 15.83%;
+        background:silver;        
+        overflow: hidden;
+        font-size:12px; //Need conversion
+        letter-spacing: 2.2px; //Need conversion
+        .expand-container{
+            height: 200%;    
+            widows: 100%;
+            background:skyblue;
+        }
+    }
+
+    .option-container{
+        padding:0% 14.06%;
+        height: 77.5%;
+        background:grey;
+    }
+}
+
+
+

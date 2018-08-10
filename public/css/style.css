@@ -1,0 +1,27 @@
+.sequencing-content-container {
+  height: 360px;
+  width: 640px;
+  background: blue;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+.sequencing-content-container .question-container {
+  padding: 1.875% 14.06%;
+  height: 15.83%;
+  background: silver;
+  overflow: hidden;
+  font-size: 12px;
+  letter-spacing: 2.2px;
+}
+.sequencing-content-container .question-container .expand-container {
+  height: 200%;
+  widows: 100%;
+  background: skyblue;
+}
+.sequencing-content-container .option-container {
+  padding: 0% 14.06%;
+  height: 77.5%;
+  background: grey;
+}
+
+/*# sourceMappingURL=style.css.map */
