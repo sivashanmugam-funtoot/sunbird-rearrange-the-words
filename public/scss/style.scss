@@ -61,6 +61,7 @@ $option-container-height: 360 - $question-container-height - $option-container-h
             bottom:5%;
             right: 9%;
             z-index:2;
+            cursor:pointer;
             img{
                 @extend %absolute-center;
                 height:70%;
@@ -68,31 +69,40 @@ $option-container-height: 360 - $question-container-height - $option-container-h
         }
     }
 
-    .option-container{
+    .option-container.horizontal{
         height: findRelativeToHeight($option-container-height);
-        padding-top:findRelativeToWidh(18);
+        padding-top:findRelativeToWidh(84);
         padding-bottom:findRelativeToWidh(46);
-        padding-right: findRelativeToWidh(90);
-        padding-left: findRelativeToWidh(90);
-        .option-block{
-            cursor:move;
-            width:100%;
-            background:yellowgreen;
-            height: ((48 / $option-container-height) * 100 * 1%);
-            margin-bottom:findRelativeToWidh(10);
-            border-radius: 4px;	
-            background-color: #FFFFFF;
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-            position: relative;
-            span{
-                position: absolute;
-                top:0;
-                bottom: 0;
-                right:3%;
-                left:5%;
-                display: flex;
-                align-items: center;
+        padding-right: findRelativeToWidh(88);
+        padding-left: findRelativeToWidh(88);
+        .option-block-container{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            .option-block{
+                cursor:move;
+                width: (111 / ($device-width - (2 * 88))) * 100 * 1%; //90 is padding of option container, thus reminding is width of the option container
+                height: ((111 / $option-container-height) * 100 * 1%);
+                margin-right:findRelativeToWidh(8);
+                border-radius: 4px;	
+                background-color: #FFFFFF;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+                position: relative;
+                float:left;
+                span{
+                    position: absolute;
+                    top:0;
+                    bottom: 0;
+                    right:3%;
+                    left:5%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
+        }
+        .option-block:last-child{
+            margin-right:findRelativeToWidh(0);
         }
     }
 }
