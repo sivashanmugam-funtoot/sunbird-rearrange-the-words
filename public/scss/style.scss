@@ -61,6 +61,7 @@ $option-container-height: 360 - $question-container-height - $option-container-h
             bottom:5%;
             right: 9%;
             z-index:2;
+            cursor:pointer;
             img{
                 @extend %absolute-center;
                 height:70%;
@@ -74,10 +75,9 @@ $option-container-height: 360 - $question-container-height - $option-container-h
         padding-bottom:findRelativeToWidh(46);
         padding-right: findRelativeToWidh(90);
         padding-left: findRelativeToWidh(90);
-        .option-block{
+        .option-block.vertical{
             cursor:move;
             width:100%;
-            background:yellowgreen;
             height: ((48 / $option-container-height) * 100 * 1%);
             margin-bottom:findRelativeToWidh(10);
             border-radius: 4px;	

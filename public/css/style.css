@@ -51,6 +51,7 @@
   bottom: 5%;
   right: 9%;
   z-index: 2;
+  cursor: pointer;
 }
 .sequencing-content-container .question-container .expand-button img {
   height: 70%;
@@ -62,10 +63,9 @@
   padding-right: 14.0625%;
   padding-left: 14.0625%;
 }
-.sequencing-content-container .option-container .option-block {
+.sequencing-content-container .option-container .option-block.vertical {
   cursor: move;
   width: 100%;
-  background: yellowgreen;
   height: 22.3255813953%;
   margin-bottom: 1.5625%;
   border-radius: 4px;
@@ -73,7 +73,7 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   position: relative;
 }
-.sequencing-content-container .option-container .option-block span {
+.sequencing-content-container .option-container .option-block.vertical span {
   position: absolute;
   top: 0;
   bottom: 0;
