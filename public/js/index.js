@@ -3,8 +3,8 @@ var SEQController = SEQController || {};
 SEQController.onDomReady = function () {
     SEQController.isQuestionTextOverflow();
     $(document).ready(function () {
-        $(".option-container").sortable();
-        $(".option-container").disableSelection();
+        $(".option-block-container").sortable();
+        $(".option-block-container").disableSelection();
     })
 }
 
