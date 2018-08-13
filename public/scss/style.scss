@@ -1,28 +1,99 @@
-.sequencing-content-container{
-    height:360px;
-    width:640px;
-    background:blue;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+@function findRelativeToWidh($value) {  
+    @return ((($value / $device-width) * 100) * 1%);  
+}
 
+@function findRelativeToHeight($value) {  
+    @return ((($value / $device-height) * 100) * 1%);  
+}
+%absolute-center{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+    .flip {
+    transform: rotate(-180deg);
+}
+
+$device-width: 640;
+$device-height: 360;
+$question-container-height:81;
+$option-container-height-padding:64;
+$option-container-height: 360 - $question-container-height - $option-container-height-padding;
+.sequencing-content-container{
+    height: $device-height * 1px;
+    width: $device-width * 1px;
+    font-family: 'Noto Sans';
+    line-height: 19px;
+    font-size:14px; 
+    letter-spacing: 0.7px; 
+    background: linear-gradient(0deg, #B4D0F6 0%, #D0E2F5 100%);
     .question-container{
-        padding:1.875% 14.06%;
-        height: 15.83%;
-        background:silver;        
-        overflow: hidden;
-        font-size:12px; //Need conversion
-        letter-spacing: 2.2px; //Need conversion
-        .expand-container{
-            height: 200%;    
-            widows: 100%;
-            background:skyblue;
+        padding: findRelativeToWidh(12) 0%;
+        height: findRelativeToHeight(57); //81 (57+12+12) 12 is padding here
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+        position: relative;
+        .hiding-container{
+            height: 50%;
+            padding:0%  findRelativeToWidh(90);
+            overflow: hidden;
+            background: white;
+            position: absolute;
+            z-index:1;
+            .expand-container{
+                max-height: 200%;    
+                widows: 100%;
+                p{
+                    margin-top:0;
+                }
+            }
+        }
+        .expand-button{
+            position: absolute;
+            background-color: #E3E3E3;
+            width:9%;
+            border-radius: 9px;
+            height: 21.8%;
+            bottom:5%;
+            right: 9%;
+            z-index:2;
+            img{
+                @extend %absolute-center;
+                height:70%;
+            }
         }
     }
 
     .option-container{
-        padding:0% 14.06%;
-        height: 77.5%;
-        background:grey;
+        height: findRelativeToHeight($option-container-height);
+        padding-top:findRelativeToWidh(18);
+        padding-bottom:findRelativeToWidh(46);
+        padding-right: findRelativeToWidh(90);
+        padding-left: findRelativeToWidh(90);
+        .option-block{
+            cursor:move;
+            width:100%;
+            background:yellowgreen;
+            height: ((48 / $option-container-height) * 100 * 1%);
+            margin-bottom:findRelativeToWidh(10);
+            border-radius: 4px;	
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+            position: relative;
+            span{
+                position: absolute;
+                top:0;
+                bottom: 0;
+                right:3%;
+                left:5%;
+                display: flex;
+                align-items: center;
+            }
+        }
     }
 }
 

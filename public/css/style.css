@@ -1,27 +1,86 @@
+.sequencing-content-container .question-container .expand-button img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.flip {
+  transform: rotate(-180deg);
+}
+
 .sequencing-content-container {
   height: 360px;
   width: 640px;
-  background: blue;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-family: "Noto Sans";
+  line-height: 19px;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  background: linear-gradient(0deg, #B4D0F6 0%, #D0E2F5 100%);
 }
 .sequencing-content-container .question-container {
-  padding: 1.875% 14.06%;
-  height: 15.83%;
-  background: silver;
-  overflow: hidden;
-  font-size: 12px;
-  letter-spacing: 2.2px;
+  padding: 1.875% 0%;
+  height: 15.8333333333%;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
 }
-.sequencing-content-container .question-container .expand-container {
-  height: 200%;
+.sequencing-content-container .question-container .hiding-container {
+  height: 50%;
+  padding: 0% 14.0625%;
+  overflow: hidden;
+  background: white;
+  position: absolute;
+  z-index: 1;
+}
+.sequencing-content-container .question-container .hiding-container .expand-container {
+  max-height: 200%;
   widows: 100%;
-  background: skyblue;
+}
+.sequencing-content-container .question-container .hiding-container .expand-container p {
+  margin-top: 0;
+}
+.sequencing-content-container .question-container .expand-button {
+  position: absolute;
+  background-color: #E3E3E3;
+  width: 9%;
+  border-radius: 9px;
+  height: 21.8%;
+  bottom: 5%;
+  right: 9%;
+  z-index: 2;
+}
+.sequencing-content-container .question-container .expand-button img {
+  height: 70%;
 }
 .sequencing-content-container .option-container {
-  padding: 0% 14.06%;
-  height: 77.5%;
-  background: grey;
+  height: 59.7222222222%;
+  padding-top: 2.8125%;
+  padding-bottom: 7.1875%;
+  padding-right: 14.0625%;
+  padding-left: 14.0625%;
+}
+.sequencing-content-container .option-container .option-block {
+  cursor: move;
+  width: 100%;
+  background: yellowgreen;
+  height: 22.3255813953%;
+  margin-bottom: 1.5625%;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.sequencing-content-container .option-container .option-block span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 3%;
+  left: 5%;
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
