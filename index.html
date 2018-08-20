@@ -1,37 +1,48 @@
 <html>
-    <head>
-            <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-        <link href="./public/css/style.css"  rel="stylesheet"/>
-    </head>
-    <body>
-        <div class="sequencing-content-container">
-            <div class="question-container">
-                <div class="hiding-container">
-                    <div class="expand-container">
-                        <p>P tag 1 : Arrange the following oxoacids in order of decreasing acid strength.</p>
-                        <p>P tag 2 : Arrange the following oxoacids in order of decreasing acid strength.</p>
-                        <p>P tag 3 : Arrange the following oxoacids in order of decreasing acid strength.</p>
-                        <p>P tag 4 : Arrange the following oxoacids in order of decreasing acid strength.</p>
-                        
-                    </div>
-                </div>
-                <div class="expand-button" onclick="SEQController.toggleQuestionText()">
-                    <img src='https://raw.githubusercontent.com/sivashanmugam-funtoot/org.ekstep.questionunit.mtf/mtf-new-design/renderer/assets/down_arrow.png' />
-                    </div>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="./public/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="sequencing-content-container">
+        <div class="question-container">
+            <div class="image-container">
+                <img class="q-image" src="./public/assets/sample-images/lion-cub.png" />
+                <img class="audio" src="./public/assets/audio3.png" />
             </div>
-            <div class="option-container horizontal">
-                <div class="option-block-container">
-                    <div class="option-block">
-                        <span>HClO3</span>
-                    </div>
-                    <div class="option-block">
-                        <span>HClO</span>
-                    </div>
+            <div class="hiding-container">
+                <div class="expand-container with-media">
+                    <p>A bag of cement lying in the open gets wet due to rain during the night. The next day in the open gets
+                        wet due to rain the sun …</p>
+                </div>
+            </div>
+            <div class="expand-button" onclick="SEQController.toggleQuestionText()">
+                <img src='https://raw.githubusercontent.com/sivashanmugam-funtoot/org.ekstep.questionunit.mtf/mtf-new-design/renderer/assets/down_arrow.png'
+                />
+            </div>
+        </div>
+        <div class="option-container horizontal">
+            <div class="option-block-container">
+                <div class="option-block">
+                    <span>HClO3</span>
+                </div>
+                <div class="option-block">
+                    <span>HClO3</span>
+                </div>
+                <div class="option-block">
+                    <span>HClO3</span>
+                </div>
+                <div class="option-block">
+                    <span>HClO</span>
                 </div>
             </div>
         </div>
-    </body>
-    <script src="./public/js/jquery.min.js"  ></script>
-    <script src="./public/js/jquery-ui.min.js"  ></script>
-    <script src="./public/js/index.js"  ></script>
+    </div>
+</body>
+<script src="./public/js/jquery.min.js"></script>
+<script src="./public/js/jquery-ui.min.js"></script>
+<script src="./public/js/index.js"></script>
+
 </html>
