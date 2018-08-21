@@ -5,6 +5,15 @@
 @function findRelativeToHeight($value) {  
     @return ((($value / $device-height) * 100) * 1%);  
 }
+
+%absolute-v-middle{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+}
+
 %absolute-center{
     position: absolute;
     top:0;
@@ -14,6 +23,9 @@
     margin:auto;
 }
 
+body{
+    margin:0px;
+}
     .flip {
     transform: rotate(-180deg);
 }
@@ -37,6 +49,28 @@ $option-container-height: 360 - $question-container-height - $option-container-h
         background-color: #FFFFFF;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
         position: relative;
+        .image-container{
+            width:14%;
+            float:left;
+            top:0;
+            position: absolute;
+            z-index: 2;
+            height: 100%;
+            margin-left:9%;
+            img.q-image{
+                max-width: 100%;
+                max-height: 100%;
+                float:left;
+                @extend %absolute-v-middle;
+                right:0;
+            }
+            img.audio{
+                width: 30%;
+                float:left;
+                right:-13%;
+                @extend %absolute-v-middle;
+            }
+        }
         .hiding-container{
             height: 50%;
             padding:0%  findRelativeToWidh(90);
@@ -46,10 +80,14 @@ $option-container-height: 360 - $question-container-height - $option-container-h
             z-index:1;
             .expand-container{
                 max-height: 200%;    
-                widows: 100%;
+                width: 100%;
                 p{
                     margin-top:0;
                 }
+            }
+            .expand-container.with-media{
+                width:82%;
+                padding-left:18%;
             }
         }
         .expand-button{
