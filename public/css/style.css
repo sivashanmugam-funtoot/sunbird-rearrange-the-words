@@ -1,4 +1,4 @@
-.sequencing-content-container .question-container .image-container img.audio, .sequencing-content-container .question-container .image-container img.q-image {
+.sequencing-content-container .question-container .image-container img.audio.no-q-image, .sequencing-content-container .question-container .image-container img.audio, .sequencing-content-container .question-container .image-container img.q-image {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -58,6 +58,11 @@ body {
   width: 30%;
   float: left;
   right: -13%;
+}
+.sequencing-content-container .question-container .image-container img.audio.no-q-image {
+  width: 50%;
+  float: left;
+  right: 18%;
 }
 .sequencing-content-container .question-container .hiding-container {
   height: 50%;

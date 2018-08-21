@@ -71,6 +71,12 @@ $option-container-height: 360 - $question-container-height - $option-container-h
                 right:-13%;
                 @extend %absolute-v-middle;
             }
+            img.audio.no-q-image{
+                width: 50%;
+                float:left;
+                right:18%;
+                @extend %absolute-v-middle;
+            }
         }
         .hiding-container{
             height: 50%;
