@@ -34,8 +34,7 @@ body{
 $device-width: 640;
 $device-height: 360;
 $question-container-height:81;
-$option-container-height-padding:64;
-$option-container-height: 360 - $question-container-height - $option-container-height-padding;
+$option-container-height: 360 - $question-container-height;
 .sequencing-content-container{
     height: $device-height * 1px;
     width: $device-width * 1px;
@@ -117,14 +116,16 @@ $option-container-height: 360 - $question-container-height - $option-container-h
 
     .option-container.horizontal{
         height: findRelativeToHeight($option-container-height);
-        padding-top:findRelativeToWidh(84);
-        padding-bottom:findRelativeToWidh(46);
         padding-right: findRelativeToWidh(88);
         padding-left: findRelativeToWidh(88);
+        width: findRelativeToWidh($device-width - (88 * 2));
+        position: relative;
+        display:table;
         .option-block-container{
             justify-content: center;
-            display: flex;
+            display: table-cell;
             align-items: center;
+            vertical-align: middle;
             .option-block{
                 cursor:move;
                 width: (111 / ($device-width - (2 * 88))) * 100 * 1%; //90 is padding of option container, thus reminding is width of the option container
