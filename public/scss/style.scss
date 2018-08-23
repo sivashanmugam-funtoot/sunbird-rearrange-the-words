@@ -114,7 +114,7 @@ $option-container-height: 360 - $question-container-height;
         }
     }
 
-    .option-container.horizontal{
+    .option-container.horizontal.type-1-point-1{
         height: findRelativeToHeight($option-container-height);
         padding-right: findRelativeToWidh(88);
         padding-left: findRelativeToWidh(88);
